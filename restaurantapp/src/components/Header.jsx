@@ -100,39 +100,54 @@ function Header() {
       </div>
       {/* mobile */}
       <div className="flex items-center justify-between md:hidden w-full h-full ">
-
-      <Link to={"/"} className="flex items-center gap-2">
+        <Link to={"/"} className="flex items-center gap-2">
           <img src={Logo} className="w-8 object-cover" alt="logo" />
           <p className="text-headingColor text-xl font-bold">city</p>
         </Link>
         <div className="relative">
-            <motion.img
-              whileTap={{ scale: 0.6 }}
-              src={user ? user.photoURL : Avatar}
-              alt="userprofile"
-              className="w-10 min-w-[40px] h-10 min-h[40px] drop-shadow-xl cursor-pointer rounded-full"
-              onClick={login}
-            />
-            {isMenu && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.6 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.6 }}
-                className="w-40 flex flex-col bg-gray-50 shadow-xl rounded-lg absolute top-12 right-0 "
-              >
-                {user && user.email === "adarshmi1234@gmail.com" && (
-                  <Link to={"/createItem"}>
-                    <p className="px-4 py-2 flex items-center cursor-pointer gap-3 hover:bg-slate-100 translate-all duration-100 ease-in-out text-textColor text-base">
-                      New Items <MdAdd />
-                    </p>
-                  </Link>
-                )}
-                <p className="px-4 py-2 flex items-center cursor-pointer gap-3 hover:bg-slate-100 translate-all duration-100 ease-in-out text-textColor text-base">
-                  Logout <MdLogout />
-                </p>
-              </motion.div>
-            )}
-          </div>
+          <motion.img
+            whileTap={{ scale: 0.6 }}
+            src={user ? user.photoURL : Avatar}
+            alt="userprofile"
+            className="w-10 min-w-[40px] h-10 min-h[40px] drop-shadow-xl cursor-pointer rounded-full"
+            onClick={login}
+          />
+          {isMenu && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.6 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.6 }}
+              className="w-40 flex flex-col bg-gray-50 shadow-xl rounded-lg absolute top-12 right-0 "
+            >
+              {user && user.email === "adarshmi1234@gmail.com" && (
+                <Link to={"/createItem"}>
+                  <p className="px-4 py-2 flex items-center cursor-pointer gap-3 hover:bg-slate-100 translate-all duration-100 ease-in-out text-textColor text-base">
+                    New Items <MdAdd />
+                  </p>
+                </Link>
+              )}
+
+              <ul className="flex flex-col   ">
+                <li className="taxt-base  px-4 py-2 text-textColor  hover:bg-slate-100 hover:text-headingColor duration-100">
+                  Home
+                </li>
+                <li className="taxt-base px-4 py-2 hover:bg-slate-100 text-textColor hover:text-headingColor duration-100">
+                  Menu
+                </li>
+                <li className="taxt-base px-4 py-2 hover:bg-slate-100 text-textColor hover:text-headingColor duration-100">
+                  About us
+                </li>
+                <li className="taxt-base  px-4 py-2 hover:bg-slate-100 text-textColor hover:text-headingColor duration-100">
+                  Service
+                </li>
+              </ul>
+
+              <p className="px-4 py-2 flex justify-center  items-center cursor-pointer gap-3 hover:bg-slate-300 bg-gray-200 translate-all duration-100 ease-in-out text-textColor text-base">
+                Logout <MdLogout />
+              </p>
+            </motion.div>
+          )}
+        </div>
       </div>
     </header>
   );
