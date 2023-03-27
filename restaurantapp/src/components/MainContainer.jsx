@@ -26,10 +26,10 @@ function MainContainer() {
             />
           </div>
         </div>
-        <p className="text-[2.5rem] md:text-[4.5rem] font-bold tracking-wide text-headingColor">
-          The Fastest Delivery in <span className="text-orange-600 text-[3rem]">Your city</span>
+        <p className="text-[2.5rem] lg:text-[4.5rem] font-bold tracking-wide text-headingColor">
+          The Fastest Delivery in <span className="text-orange-600 text-[3rem] lg:text-[5rem]">Your city</span>
         </p>
-        <p className="text-base text-textColor text-center md:text-left">
+        <p className="text-base text-textColor text-center md:text-left md:w-[80%]">
         Magna consectetur fugiat laboris Lorem aliquip ea cupidatat ipsum sit reprehenderit aliquip. Eu minim ad minim consectetur. Adipisicing irure dolore ex duis enim labore qui reprehenderit deserunt anim dolore duis ullamco aliquip. Deserunt aute dolor ea id officia aliqua excepteur. Fugiat elit non deserunt voluptate consequat dolor do Lorem voluptate Lorem. Tempor incididunt irure aliqua culpa cillum sint et ipsum nostrud.
         </p>
 
