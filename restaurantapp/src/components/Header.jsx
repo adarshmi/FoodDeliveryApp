@@ -58,16 +58,24 @@ function Header() {
             exit={{ opacity: 0, x: 200 }}
             className="flex items-center gap-8 "
           >
-            <li className="taxt-base text-textColor hover:text-headingColor duration-100">
+            <li className="taxt-base text-textColor hover:text-headingColor duration-100"
+            onClick ={()=>setIsMenu(false)}
+            >
               Home
             </li>
-            <li className="taxt-base text-textColor hover:text-headingColor duration-100">
+            <li className="taxt-base text-textColor hover:text-headingColor duration-100"
+            onClick ={()=>setIsMenu(false)}
+            >
               Menu
             </li>
-            <li className="taxt-base text-textColor hover:text-headingColor duration-100">
+            <li className="taxt-base text-textColor hover:text-headingColor duration-100"
+            onClick ={()=>setIsMenu(false)}
+            >
               About us
             </li>
-            <li className="taxt-base text-textColor hover:text-headingColor duration-100">
+            <li className="taxt-base text-textColor hover:text-headingColor duration-100"
+            onClick ={()=>setIsMenu(false)}
+            >
               Service
             </li>
           </motion.ul>
@@ -95,7 +103,10 @@ function Header() {
               >
                 {user && user.email === "adarshmi1234@gmail.com" && (
                   <Link to={"/createItem"}>
-                    <p className="px-4 py-2 flex items-center cursor-pointer gap-3 hover:bg-slate-100 translate-all duration-100 ease-in-out text-textColor text-base">
+                    <p className="px-4 py-2 flex items-center cursor-pointer gap-3 hover:bg-slate-100 translate-all duration-100 ease-in-out text-textColor text-base"
+                    onClick ={()=>setIsMenu(false)}
+
+                    >
                       New Items <MdAdd />
                     </p>
                   </Link>
